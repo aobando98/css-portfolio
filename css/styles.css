@@ -18,13 +18,14 @@ https://coolors.co/310a31-b0413e-7dcd85-183a37-eeb868
 --sunray: #EEB868FF;
 */
 
-
 /* Global styles
 ------------------------------------*/
 html {
   box-sizing: border-box;
 }
-*, *:before, *:after {
+*,
+*:before,
+*:after {
   box-sizing: inherit;
 }
 
@@ -32,7 +33,7 @@ body {
   color: #343434;
   margin: 0;
   padding: 0;
-  font-family: 'Montserrat', sans-serif;
+  font-family: "Montserrat", sans-serif;
   font-size: 15px;
   line-height: 1.5;
 }
@@ -40,7 +41,7 @@ img {
   width: 300px;
 }
 a {
-  color: #A1C6D7;
+  color: #a1c6d7;
 }
 a:hover {
   text-decoration: none;
@@ -52,8 +53,9 @@ h1 {
 h2 {
   font-size: 45px;
 }
-h1, h2 {
-  font-family: 'Arial', Cursive;
+h1,
+h2 {
+  font-family: "Arial", Cursive;
   font-weight: 400;
   margin: 0;
 }
@@ -80,26 +82,24 @@ h3 {
   border-bottom: none;
 }
 
-
 /* Profile
 ------------------------------------*/
 header {
-  background: #183A37FF;
-  color: #F7FFF7;
+  background: #183a37ff;
+  color: #f7fff7;
 }
-
 
 /* Projects
 ------------------------------------*/
 .projects {
-  background: #EEB868FF;
+  background: #eeb868ff;
 }
 .projects a {
-  color: #2F3061;
+  color: #2f3061;
 }
 .projects .btn {
-  color: #F7FFF7;
-  background: #310A31FF;
+  color: #f7fff7;
+  background: #310a31ff;
   text-decoration: none;
   padding: 8px;
   border-radius: 4px;
@@ -115,15 +115,12 @@ header {
   margin-top: 0;
 }
 
-
 /* Work Experience
 ------------------------------------*/
 .work-experience {
-  background: #B0413EFF;
-  color: #F7FFF7;
+  background: #b0413eff;
+  color: #f7fff7;
 }
-
-
 
 /* Education
 ------------------------------------*/
@@ -137,12 +134,11 @@ header {
   width: 60%;
 }
 
-
 /* Contact Info
 ------------------------------------*/
 footer {
-  background: #7DCD85FF;
-  color: #F7FFF7;
+  background: #7dcd85ff;
+  color: #f7fff7;
 }
 .contact-list {
   list-style-type: none;
@@ -151,14 +147,14 @@ footer {
 .contact-list a {
   padding: 15px;
   display: inline-block;
-  color: #2F3061;
+  color: #2f3061;
 }
-
 
 /* Responsive
 ------------------------------------*/
-@media screen and (min-width:750px){
-  header, footer {
+@media screen and (min-width: 750px) {
+  header,
+  footer {
     text-align: center;
   }
   .project-item img {
@@ -177,7 +173,7 @@ footer {
   }
 }
 
-@media screen and (max-width:749px){
+@media screen and (max-width: 749px) {
   h1 {
     font-size: 75px;
     line-height: 0.9;
