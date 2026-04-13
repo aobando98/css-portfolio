@@ -119,9 +119,9 @@ header {
 /* Projects
 ------------------------------------*/
 .projects { background: var(--color-project-bg); }
-.projects a { color: var(--color-blue-dark); }
+.projects a:not(.btn) { color: var(--color-blue-dark); }
 
-.btn { color: var(--color-almost-white); background: var(--color-dark-purple); text-decoration:none; padding:10px 12px; border-radius: var(--btn-radius); display:inline-block; }
+a.btn, .btn { color: var(--color-almost-white); background: var(--color-dark-purple); text-decoration: none; padding: 10px 12px; border-radius: var(--btn-radius); display:inline-block; }
 .btn:hover { opacity: 0.95; }
 .resume-btn { display:inline-block; margin-top:12px; background:var(--color-blue-dark); color:#fff; padding:8px 12px; border-radius:var(--btn-radius); text-decoration:none; }
 .project-item { overflow:hidden; margin-bottom:28px; display:block; }
@@ -129,6 +129,10 @@ header {
 .project-image { width:100%; height:auto; aspect-ratio: 16/9; object-fit:cover; display:block; border-radius:6px; }
 .project-meta { list-style:none; padding:0; margin:8px 0; }
 .project-meta li { font-size:0.95rem; }
+
+/* Ensure sufficient contrast on dark sections */
+.work-experience a, .job-summary a, .job-item a { color: var(--color-almost-white); }
+
 
 /* Work Experience
 ------------------------------------*/
@@ -154,7 +158,7 @@ header {
 ------------------------------------*/
 footer {
   background: var(--color-footer);
-  color: var(--color-almost-white);
+  color: var(--color-rich-black);
 }
 
 .contact-list {
@@ -164,8 +168,12 @@ footer {
 .contact-list a {
   padding: 15px;
   display: inline-block;
-  color: var(--color-blue-dark);
+  color: var(--color-rich-black);
 }
+
+/* Ensure footer headings are readable */
+footer h2 { color: var(--color-rich-black); }
+.contact-form label { color: var(--color-rich-black); }
 
 
 /* Responsive rules */
