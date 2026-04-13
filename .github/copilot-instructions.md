@@ -44,7 +44,7 @@ High-level architecture (big picture)
 - Image pipeline: scripts/images.js uses sharp to produce resized JPEG/WebP/AVIF variants (sizes: 480/800/1200). This is optional in CI and locally may require platform build tools.
 - Tests: Playwright tests are in tests/ (e2e.spec.js, meta.spec.js, a11y.spec.js). playwright.config.js launches an http-server at port 5000 to serve the repo for tests.
 - SSG scaffolding: Eleventy is scaffolded (src/, .eleventy.js) — optional migration path; build target is _site/ when used.
-- CI: .github/workflows/playwright-ci.yml runs install, build, images (tolerant), Playwright install, and tests. deploy.yml (GitHub Pages) builds and deploys _site/ when used.
+- CI: .github/workflows/playwright-ci.yml runs install, build, images (tolerant), Playwright install, and tests. .github/workflows/deploy.yml builds the site and (by default) deploys the _site/ folder to GitHub Pages using peaceiris/actions-gh-pages (pushes to the gh-pages branch). Make sure the repository's Pages settings are configured to serve from the gh-pages branch or update the workflow to match your chosen Pages configuration.
 
 Key conventions and repository-specific rules
 - DOM/CSS conventions:
