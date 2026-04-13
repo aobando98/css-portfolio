@@ -9,7 +9,7 @@
     "format": "npx prettier --write \"**/*.{html,css,md,json}\"",
     "lint:css": "npx stylelint \"css/**/*.css\"",
     "postinstall": "npx playwright install --with-deps",
-    "build:css": "npx esbuild css/styles.css --bundle --minify --outfile=css/styles.min.css",
+    "build:css": "npx esbuild css/styles.css --minify --outfile=css/styles.min.css",
     "build": "npm run build:css",
     "images": "node scripts/images.js",
     "build:site": "npx eleventy --input=src --output=_site"
