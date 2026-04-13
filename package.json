@@ -8,7 +8,7 @@
     "test": "npx playwright test",
     "format": "npx prettier --write \"**/*.{html,css,md,json}\"",
     "lint:css": "npx stylelint \"css/**/*.css\"",
-    "postinstall": "npx playwright install --with-deps",
+    "postinstall": "if [ -n \"$NETLIFY\" ]; then exit 0; else npx playwright install --with-deps; fi",
     "build:css": "npx esbuild css/styles.css --minify --outfile=css/styles.min.css",
     "build": "npm run build:css",
     "images": "node scripts/images.js",
