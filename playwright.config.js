@@ -4,6 +4,7 @@ module.exports = {
   reporter: [['list'], ['html', { outputFolder: 'playwright-report' }]],
   use: {
     headless: true,
+    baseURL: 'http://localhost:5000',
     viewport: { width: 1280, height: 720 },
     actionTimeout: 0,
     trace: 'on-first-retry',
