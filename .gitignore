@@ -1,44 +1,74 @@
-# See https://help.github.com/articles/ignoring-files/ for more about ignoring files.
-
-# dependencies
-/node_modules
-/.pnp
+# Node
+node_modules/
+.pnp/
 .pnp.js
-
-# testing
-/coverage
-
-# next.js
-/.next/
-/out/
-
-# production
-/build
-
-# misc
-.DS_Store
-*.pem
-.vscode
-
-# debug
 npm-debug.log*
 yarn-debug.log*
 yarn-error.log*
 .pnpm-debug.log*
 
-# local env files
-.env*.local
+# Environment
+.env
+.env.local
+.env.*.local
 
-# vercel
+# Testing
+/coverage
+
+# Build & generated
+/build
+/dist
+_site
+css/styles.min.css
+images/optimized
+playwright-report/
+playwright-report.zip
+
+# Static site generators
+.cache
+
+# Editors & IDEs
+.vscode/
+.idea/
+*.suo
+*.ntvs*
+*.njsproj
+*.sln
+
+# OS files
+.DS_Store
+Thumbs.db
+desktop.ini
+
+# Deployment
 .vercel
+.netlify/
 
-# typescript
+# TypeScript
 *.tsbuildinfo
 next-env.d.ts
 
-# contentlayer
+# Contentlayer
 .contentlayer
+
+# Misc
+*.pem
+*.log
+
+# Caches
+.eslintcache
+.prettiercache
+.sass-cache/
+parcel-cache/
 
 # Playwright
 playwright-report
 playwright-report.zip
+
+# Eleventy output
+_site/
+
+# Ignore generated images folder
+images/optimized/
+
+# Keep package lock files and config tracked (do not ignore package-lock.json or yarn.lock)

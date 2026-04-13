@@ -24,6 +24,12 @@ jobs:
       - name: Install dependencies
         run: npm install --no-audit --no-fund
 
+      - name: Build CSS
+        run: npm run build
+
+      - name: Generate images
+        run: npm run images || true
+
       - name: Install Playwright browsers
         run: npx playwright install --with-deps
 

@@ -10,13 +10,18 @@
     "lint:css": "npx stylelint \"css/**/*.css\"",
     "postinstall": "npx playwright install --with-deps",
     "build:css": "npx esbuild css/styles.css --bundle --minify --outfile=css/styles.min.css",
-    "build": "npm run build:css"
+    "build": "npm run build:css",
+    "images": "node scripts/images.js",
+    "build:site": "npx eleventy --input=src --output=_site"
   },
   "devDependencies": {
     "@playwright/test": "^1.37.0",
     "http-server": "^14.1.1",
     "prettier": "^2.8.0",
     "stylelint": "^14.0.0",
-    "esbuild": "^0.19.0"
+    "esbuild": "^0.19.0",
+    "sharp": "^0.32.1",
+    "@axe-core/playwright": "^4.2.0",
+    "eleventy": "^1.0.0"
   }
 }
