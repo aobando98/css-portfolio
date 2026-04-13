@@ -23,5 +23,8 @@
     "sharp": "^0.32.1",
     "@axe-core/playwright": "^4.2.0",
     "eleventy": "^1.0.0"
+  },
+  "engines": {
+    "node": ">=18"
   }
 }
