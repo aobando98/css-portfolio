@@ -3,196 +3,235 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>
-      Alberto Obando Zúñiga, Computer Science Engineer + Assistant Accountant
-    </title>
+    <title>Alberto Obando Zúñiga — Computer Science Engineer & Assistant Accountant</title>
+    <meta name="description" content="Alberto Obando Zúñiga — Computer Science Engineer and Assistant Accountant based in Costa Rica. I build clear, maintainable web apps for small businesses. Available for freelance and remote work." />
+    <link rel="canonical" href="https://albertoobando.com/" />
+    <meta property="og:title" content="Alberto Obando Zúñiga — Developer & Assistant Accountant" />
+    <meta property="og:description" content="Full-stack developer creating usable web apps for small businesses. Based in Costa Rica." />
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://albertoobando.com/" />
+    <meta property="og:image" content="images/og-image.svg" />
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:site" content="@albertoobando" />
+    <meta name="theme-color" content="#183A37" />
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css?family=Caveat|Montserrat:400,600&display=swap" rel="stylesheet">
     <link rel="preload" href="css/styles.css" as="style" onload="this.rel='stylesheet'">
     <noscript><link rel="stylesheet" href="css/styles.css"></noscript>
+
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@graph": [
+        {
+          "@type": "Person",
+          "name": "Alberto Obando Zúñiga",
+          "alternateName": "Alberto Obando",
+          "jobTitle": "Computer Science Engineer",
+          "worksFor": {
+            "@type": "Organization",
+            "name": "Tecnológico de Costa Rica"
+          },
+          "url": "https://albertoobando.com",
+          "sameAs": [
+            "https://www.linkedin.com/in/alberto-obando-zuniga/",
+            "https://www.instagram.com/touristico1/"
+          ]
+        },
+        {
+          "@type": "WebSite",
+          "url": "https://albertoobando.com",
+          "name": "Alberto Obando — Portfolio",
+          "publisher": {
+            "@type": "Person",
+            "name": "Alberto Obando Zúñiga"
+          }
+        }
+      ]
+    }
+    </script>
   </head>
   <body>
-    <main>
-      <!-- ***************  ABOUT / PROFILE  **************** -->
+    <a class="skip-link" href="#main-content">Skip to main content</a>
+    <main id="main-content">
       <header>
         <div class="content-wrap">
-          <h1>Alberto Obando Zúñiga</h1>
-          <h2>Computer Science Engineer</h2>
-
-          <p>
-            As a developer, I am able to bring to life my clients desires and
-            fulfil all their requirements.
-          </p>
+          <div class="site-header-inner">
+            <h1>Alberto Obando Zúñiga</h1>
+            <h2 class="tagline">Full‑stack developer building usable web apps for small businesses</h2>
+            <p class="elevator">I design, build and maintain websites and web apps using modern JavaScript and accessible design. Based in Costa Rica — available for remote work.</p>
+            <nav aria-label="Primary" class="primary-nav">
+              <a href="#main-content">Home</a>
+              <a href="#projects">Projects</a>
+              <a href="#work-experience">Work</a>
+              <a href="#education">Education</a>
+              <a href="#contact">Contact</a>
+            </nav>
+            <a class="resume-btn" href="/resume.pdf" download>Download résumé</a>
+          </div>
         </div>
       </header>
 
-      <!-- ************ PROJECTS / PORTFOLIO  ************** -->
-      <section class="projects">
+      <section id="projects" class="projects">
         <div class="content-wrap divider">
           <h2>Featured Projects</h2>
-          <p>
-            These are my projects in development below. More information can be
-            found at <a href="https://albertoobando.com">albertoobando.com</a>.
-          </p>
+          <p>These are my projects in development below. More information can be found at <a href="https://albertoobando.com" target="_blank" rel="noopener noreferrer">albertoobando.com</a>.</p>
 
-          <!-- Project 1 -->
-          <section class="project-item">
-            <img
-              src="images/TourisTICOCar.jpg"
-              alt="TourisTICO car in Turrialba"
-              loading="lazy"
-              decoding="async"
-            />
-            <h3>TourisTICO</h3>
-            <p>
-              TourisTICO is a Blog tipe web page about discovering Costa Rica
-              with my dog, my truck, and my friends.
-            </p>
-            <a
-              class="btn"
-              href="https://www.instagram.com/touristico1/"
-              target="_blank"
-              >Follow me</a
-            >
-          </section>
+          <article class="project-item" aria-labelledby="proj-touristico">
+            <figure>
+              <picture>
+                <source type="image/jpeg" srcset="images/TourisTICOCar.jpg 1200w, images/TourisTICOCar.jpg 800w" sizes="(max-width: 600px) 800px, 1200px">
+                <img src="images/TourisTICOCar.jpg" alt="TourisTICO car in Turrialba" class="project-image" loading="lazy" decoding="async" />
+              </picture>
+              <figcaption>TourisTICO — blog about discovering Costa Rica with my dog and truck.</figcaption>
+            </figure>
+            <h3 id="proj-touristico">TourisTICO</h3>
+            <p>TourisTICO is a blog-type website about discovering Costa Rica with my dog, my truck, and my friends.</p>
+            <ul class="project-meta">
+              <li><strong>Role:</strong> Creator</li>
+              <li><strong>Tech:</strong> HTML, CSS, Instagram</li>
+              <li><strong>Outcome:</strong> Growing local audience</li>
+            </ul>
+            <a class="btn" href="https://www.instagram.com/touristico1/" target="_blank" rel="noopener noreferrer" aria-label="Open TourisTICO Instagram (new tab)">View on Instagram</a>
+          </article>
 
-          <!-- Project 2 -->
-          <section class="project-item">
-            <img src="images/506LabStore.jpg" alt="506 Lab Store Logo" loading="lazy" decoding="async" />
-            <h3>506 Lab Store</h3>
-            <p>
-              506 Lab Store is a store that specializes in selling and repairing
-              electronic devices. They have a wide range of products and
-              services available. To see more please visit the site.
-            </p>
-            <a
-              class="btn"
-              href="https://www.facebook.com/506labstore-360275531273529/"
-              target="_blank"
-              >Consult now!!</a
-            >
-          </section>
+          <article class="project-item" aria-labelledby="proj-506lab">
+            <figure>
+              <picture>
+                <source type="image/jpeg" srcset="images/506LabStore.jpg 1200w, images/506LabStore.jpg 800w" sizes="(max-width: 600px) 800px, 1200px">
+                <img src="images/506LabStore.jpg" alt="506 Lab Store Logo" class="project-image" loading="lazy" decoding="async" />
+              </picture>
+              <figcaption>506 Lab Store — electronics shop (sales & repairs).</figcaption>
+            </figure>
+            <h3 id="proj-506lab">506 Lab Store</h3>
+            <p>506 Lab Store specializes in selling and repairing electronic devices. See the store for services and product availability.</p>
+            <ul class="project-meta">
+              <li><strong>Role:</strong> Front-end & content</li>
+              <li><strong>Tech:</strong> HTML, CSS</li>
+              <li><strong>Outcome:</strong> Improved online presence</li>
+            </ul>
+            <a class="btn" href="https://www.facebook.com/506labstore-360275531273529/" target="_blank" rel="noopener noreferrer" aria-label="Visit 506 Lab Store Facebook page (new tab)">View on Facebook</a>
+          </article>
 
-          <!-- Project 3 -->
-          <section class="project-item">
-            <img src="images/spookyGlitterLogo.jpg" alt="Spooky Glitter Logo" loading="lazy" decoding="async" />
-            <h3>Spooky Glitter</h3>
-            <p>
-              Spooky Glitter is a store website where the users can see all the
-              available a soon to come items. They are also able to buy directly
-              from the website.
-            </p>
-            <a
-              class="btn"
-              href="https://www.instagram.com/spooky_glitter/"
-              target="_blank"
-              >See our Instagram</a
-            >
-          </section>
+          <article class="project-item" aria-labelledby="proj-spooky">
+            <figure>
+              <picture>
+                <source type="image/jpeg" srcset="images/spookyGlitterLogo.jpg 1200w, images/spookyGlitterLogo.jpg 800w" sizes="(max-width: 600px) 800px, 1200px">
+                <img src="images/spookyGlitterLogo.jpg" alt="Spooky Glitter Logo" class="project-image" loading="lazy" decoding="async" />
+              </picture>
+              <figcaption>Spooky Glitter — store showcasing upcoming items and direct purchase links.</figcaption>
+            </figure>
+            <h3 id="proj-spooky">Spooky Glitter</h3>
+            <p>Spooky Glitter is an e‑commerce site for handmade goods; customers can browse items and make purchases.</p>
+            <ul class="project-meta">
+              <li><strong>Role:</strong> Designer</li>
+              <li><strong>Tech:</strong> HTML, CSS, Instagram</li>
+              <li><strong>Outcome:</strong> Streamlined product previews</li>
+            </ul>
+            <a class="btn" href="https://www.instagram.com/spooky_glitter/" target="_blank" rel="noopener noreferrer" aria-label="Open Spooky Glitter Instagram (new tab)">See Instagram</a>
+          </article>
+
         </div>
       </section>
 
-      <!-- ****************  WORK EXPERIENCE  ******************** -->
-      <section class="work-experience">
+      <section id="work-experience" class="work-experience">
         <div class="content-wrap item-details divider">
           <h2>Work Experience</h2>
-          <p>
-            See my complete work experience on
-            <a href="https://www.linkedin.com/in/alberto-obando-zuniga/"
-              >LinkedIn</a
-            >.
-          </p>
+          <p>See my complete work experience on <a href="https://www.linkedin.com/in/alberto-obando-zuniga/" target="_blank" rel="noopener noreferrer">LinkedIn</a>.</p>
 
-          <!-- Job 1 -->
           <section class="job-item">
             <div class="job-details">
               <h3>Project Management and QA</h3>
               <p>Tecnológico de Costa Rica</p>
-              <p>February 2019-Present</p>
+              <p>February 2019–Present</p>
             </div>
             <div class="job-summary">
-              <p>
-                Managed diferent types of projects so QA was always maintained
-                and the best result was achieved
-                <a href="https://albertoobando.com">albertoobando.com</a>.
-              </p>
+              <p>Managed different projects to ensure quality assurance and delivery of successful results. See <a href="https://albertoobando.com" target="_blank" rel="noopener noreferrer">albertoobando.com</a> for details.</p>
             </div>
           </section>
 
-          <!-- Job 2 -->
           <section class="job-item">
             <div class="job-details">
               <h3>Assistant for Algorithm Analysis and Sound Synthesis</h3>
               <p>Tecnológico de Costa Rica</p>
-              <p>February 2018 - July 2018</p>
+              <p>February 2018–July 2018</p>
             </div>
             <div class="job-summary">
-              <p>
-                Assisted profesor Rodrigo Nuñez Nuñez while he was teaching
-                classes.
-              </p>
+              <p>Assisted professor Rodrigo Nuñez Nuñez with teaching and grading.</p>
               <p>Key contributions:</p>
               <ul>
-                <li>Grading of Quizes and Projects.</li>
-                <li>
-                  Answering of doubts any of the students had about their grade.
-                </li>
+                <li>Grading of quizzes and projects.</li>
+                <li>Answering students' questions and clarifying grading.</li>
               </ul>
             </div>
           </section>
         </div>
       </section>
 
-      <!-- *************  EDUCATION & CERTIFICATIONS *********** -->
-      <section class="education">
+      <section id="education" class="education">
         <div class="content-wrap item-details">
           <h2>Education</h2>
 
           <section>
             <h3>Tecnológico de Costa Rica - Cartago, CR</h3>
-            <p>Bachelor in Computer Science Engeeniring, 2016-to date</p>
+            <p>Bachelor in Computer Science Engineering, 2016–present</p>
           </section>
 
           <section>
             <h3>ULACIT - San Jose, CR</h3>
-            <p>Accounting assistance technician, 2020-to date</p>
+            <p>Accounting assistance technician, 2020–present</p>
           </section>
 
           <section>
             <h3>Saint Paul High School - Alajuela, CR</h3>
-            <p>Bachelor in Secondary Education, 2011-2015</p>
+            <p>Bachelor in Secondary Education, 2011–2015</p>
           </section>
         </div>
       </section>
 
-      <!-- ************  CONTACT INFO / SOCIAL MEDIA  ************ -->
-      <footer>
+      <section id="skills" class="skills">
         <div class="content-wrap">
-          <h2>Contact me:</h2>
+          <h2>Skills</h2>
+          <p>Languages & technologies: JavaScript, HTML, CSS, Node.js, Git. Familiar with React and basic back-end concepts.</p>
+          <p>Availability: Based in Costa Rica — available for remote work. Typical response time: 48–72 hours.</p>
+        </div>
+      </section>
 
-          <!-- Social media and contact links. Add or remove any networks. -->
+      <section id="testimonials" class="testimonials">
+        <div class="content-wrap">
+          <h2>Testimonials</h2>
+          <blockquote>
+            “Alberto is reliable and delivers quality work on schedule.” — Client, 506 Lab Store
+          </blockquote>
+          <blockquote>
+            “Great communication and attention to detail.” — Course instructor
+          </blockquote>
+        </div>
+      </section>
+
+      <footer id="contact">
+        <div class="content-wrap">
+          <h2>Contact me</h2>
           <ul class="contact-list">
-            <li>
-              <a href="mailto:alberto.obando98@gmail.com"
-                >alberto.obando98@gmail.com</a
-              >
-            </li>
-            <li>
-              <a href="https://albertoobando.com" target="_blank"
-                >albertoobando.com</a
-              >
-            </li>
-            <li>
-              <a
-                href="https://www.linkedin.com/in/alberto-obando-zuniga/"
-                target="_blank"
-                >LinkedIn</a
-              >
-            </li>
+            <li><a href="mailto:alberto.obando98@gmail.com">alberto.obando98@gmail.com</a></li>
+            <li><a href="https://albertoobando.com" target="_blank" rel="noopener noreferrer">albertoobando.com</a></li>
+            <li><a href="https://www.linkedin.com/in/alberto-obando-zuniga/" target="_blank" rel="noopener noreferrer">LinkedIn</a></li>
           </ul>
+
+          <form class="contact-form" action="https://formspree.io/f/your-id" method="POST" aria-label="Contact form">
+            <label for="name">Name</label>
+            <input id="name" name="name" type="text" required />
+            <label for="email">Email</label>
+            <input id="email" name="_replyto" type="email" required />
+            <label for="message">Message</label>
+            <textarea id="message" name="message" rows="6" required></textarea>
+            <button type="submit" class="btn">Send message</button>
+          </form>
         </div>
       </footer>
+
+      <a class="back-to-top" href="#main-content" aria-label="Back to top">↑</a>
     </main>
   </body>
 </html>

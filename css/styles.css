@@ -27,33 +27,43 @@ https://coolors.co/310a31-b0413e-7dcd85-183a37-eeb868
 --sunray: #EEB868FF;
 */
 
-/* Global styles
-------------------------------------*/
-html {
-  box-sizing: border-box;
-}
-*,
-*:before,
-*:after {
-  box-sizing: inherit;
-}
+/* Global styles */
+html { box-sizing: border-box; }
+*, *:before, *:after { box-sizing: inherit; }
 
 body {
   color: var(--color-text);
   margin: 0;
   padding: 0;
-  font-family: "Montserrat", sans-serif;
-  font-size: 15px;
-  line-height: 1.5;
+  font-family: "Montserrat", system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial;
+  font-size: 16px;
+  line-height: 1.6;
 }
-img {
-  width: 100%;
-  max-width: 300px;
-  display: block;
+
+/* Skip link for keyboard users */
+.skip-link {
+  position: absolute;
+  left: -999px;
+  top: auto;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+  background: #000;
+  color: #fff;
+  padding: 8px;
+  z-index: 1000;
 }
-a {
-  color: var(--color-blue-light);
+.skip-link:focus, .skip-link:active {
+  left: 16px;
+  top: 16px;
+  width: auto;
+  height: auto;
 }
+
+img { max-width: 100%; height: auto; display: block; }
+
+a { color: var(--color-blue-light); }
+
 
 a:hover {
   text-decoration: none;
@@ -108,31 +118,17 @@ header {
 
 /* Projects
 ------------------------------------*/
-.projects {
-  background: var(--color-project-bg);
-}
-.projects a {
-  color: var(--color-blue-dark);
-}
+.projects { background: var(--color-project-bg); }
+.projects a { color: var(--color-blue-dark); }
 
-.projects .btn {
-  color: var(--color-almost-white);
-  background: var(--color-dark-purple);
-  text-decoration: none;
-  padding: 8px;
-  border-radius: var(--btn-radius);
-  display: inline-block;
-}
-.projects .btn:hover {
-  background: rgba(47, 48, 97, 0.8);
-}
-
-.project-item {
-  overflow: hidden;
-}
-.project-item h3 {
-  margin-top: 0;
-}
+.btn { color: var(--color-almost-white); background: var(--color-dark-purple); text-decoration:none; padding:10px 12px; border-radius: var(--btn-radius); display:inline-block; }
+.btn:hover { opacity: 0.95; }
+.resume-btn { display:inline-block; margin-top:12px; background:var(--color-blue-dark); color:#fff; padding:8px 12px; border-radius:var(--btn-radius); text-decoration:none; }
+.project-item { overflow:hidden; margin-bottom:28px; display:block; }
+.project-item figure { margin: 0 0 12px 0; }
+.project-image { width:100%; height:auto; aspect-ratio: 16/9; object-fit:cover; display:block; border-radius:6px; }
+.project-meta { list-style:none; padding:0; margin:8px 0; }
+.project-meta li { font-size:0.95rem; }
 
 /* Work Experience
 ------------------------------------*/
@@ -172,33 +168,19 @@ footer {
 }
 
 
-/* Responsive
-------------------------------------*/
+/* Responsive rules */
 @media screen and (min-width: 750px) {
-  header,
-  footer {
-    text-align: center;
-  }
-  .project-item img {
-    float: left;
-    margin-right: 20px;
-    width: 300px;
-  }
-
-  .job-item {
-    display: grid;
-    grid-template-columns: 1fr 2fr;
-    column-gap: 20px;
-  }
-  .contact-list {
-    display: flex;
-    justify-content: center;
-  }
-
-  h1 { font-size: 100px; }
-  h2 { font-size: 45px; }
+  header, footer { text-align: center; }
+  .project-item { display: flex; gap: 20px; align-items: flex-start; }
+  .project-item figure { flex: 0 0 320px; }
+  .project-item .project-image { width: 320px; height: 180px; }
+  .job-item { display: grid; grid-template-columns: 1fr 2fr; column-gap: 20px; }
+  .contact-list { display:flex; justify-content:center; }
+  h1 { font-size: 3.5rem; }
+  h2 { font-size: 2rem; }
   .content-wrap { padding: 60px 0; }
 }
+
 
 
 
