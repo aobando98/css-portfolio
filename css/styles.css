@@ -227,4 +227,19 @@ footer h2 { color: var(--color-rich-black); }
 .download-cv .btn { width: 100%; text-align: center; }
 .edu-contact-note p { margin: 0; font-size: 0.95rem; }
 
+/* Testimonials styles */
+.testimonials { background: linear-gradient(#ffffff, #fbfbfb); }
+.testimonials .content-wrap { padding: 40px 0; }
+.testimonial-lead { margin-bottom: 12px; color: var(--color-text); }
+.testimonials-grid { display: grid; gap: 18px; grid-template-columns: 1fr; }
+@media screen and (min-width: 900px) { .testimonials-grid { grid-template-columns: repeat(2, 1fr); } }
+.testimonial-card { background: rgba(255,255,255,0.98); padding: 18px; border-radius: 8px; box-shadow: 0 6px 16px rgba(24,58,55,0.06); border-left: 4px solid var(--color-work-bg); }
+.testimonial-card blockquote { margin: 0 0 12px 0; font-style: italic; color: var(--color-rich-black); }
+.testimonial-meta { display:flex; gap:12px; align-items:center; }
+.testimonial-avatar { width:48px; height:48px; border-radius:50%; background: linear-gradient(135deg, var(--color-blue-light), var(--color-yellow)); display:flex; align-items:center; justify-content:center; color: var(--color-rich-black); font-weight:700; }
+.testimonial-meta .name { font-weight:600; color: var(--color-text); }
+.testimonial-meta .role { display:block; font-size:0.9rem; color: #666; }
+.testimonial-cta { margin-top: 14px; text-align:center; }
+
+
 
