@@ -5,13 +5,16 @@ on:
   push:
     paths:
       - .github/workflows/copilot-setup-steps.yml
+  pull_request:
+    paths:
+      - .github/workflows/copilot-setup-steps.yml
 
 jobs:
   copilot-setup-steps:
     runs-on: ubuntu-latest
     permissions:
       contents: read
-    timeout-minutes: 30
+    timeout-minutes: 59
     steps:
       - name: Checkout repository
         uses: actions/checkout@v5
@@ -27,16 +30,19 @@ jobs:
           node --version
           npm --version
 
-      - name: Create temporary package.json if missing
+      - name: Install project dependencies if present
         run: |
-          if [ ! -f package.json ]; then
+          if [ -f package.json ]; then
+            npm ci --no-audit --no-fund
+          else
             npm init -y
           fi
 
-      - name: Install Playwright and browsers
-        run: |
-          npm install -D @playwright/test --no-audit --no-fund
-          npx playwright install --with-deps
+      - name: Build CSS (if configured)
+        run: npm run build || true
+
+      - name: Install Playwright browsers
+        run: npx playwright install --with-deps
 
       - name: Verify Playwright installation
         run: npx playwright --version
