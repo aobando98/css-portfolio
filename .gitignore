@@ -38,3 +38,7 @@ next-env.d.ts
 
 # contentlayer
 .contentlayer
+
+# Playwright
+playwright-report
+playwright-report.zip

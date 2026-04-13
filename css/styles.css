@@ -1,12 +1,21 @@
-/*
-COLOR PALETTE
-https://coolors.co/f7fff7-343434-2f3061-ffe66d-a1c6d7
-#F7FFF7 - almost white
-#343434 - dark gray - almost black
-#2F3061 - blue dark
-#FFE66D - yellow
-#A1C6D7 - blue light
-*/
+/* CSS variables — mobile-first design */
+:root {
+  --color-almost-white: #F7FFF7;
+  --color-text: #343434;
+  --color-blue-dark: #2F3061;
+  --color-yellow: #FFE66D;
+  --color-blue-light: #A1C6D7;
+  --color-dark-purple: #310A31;
+  --color-rich-black: #183A37;
+  --color-project-bg: #EEB868;
+  --color-work-bg: #B0413E;
+  --color-footer: #7DCD85;
+  --content-max-width: 800px;
+  --content-width: 85%;
+  --content-padding: 40px;
+  --btn-radius: 4px;
+}
+
 
 /*
 COLOR PALETTE 2
@@ -30,7 +39,7 @@ html {
 }
 
 body {
-  color: #343434;
+  color: var(--color-text);
   margin: 0;
   padding: 0;
   font-family: "Montserrat", sans-serif;
@@ -38,33 +47,40 @@ body {
   line-height: 1.5;
 }
 img {
-  width: 300px;
+  width: 100%;
+  max-width: 300px;
+  display: block;
 }
 a {
-  color: #a1c6d7;
+  color: var(--color-blue-light);
 }
+
 a:hover {
   text-decoration: none;
 }
 h1 {
-  font-size: 100px;
+  font-size: 75px;
   line-height: 1;
 }
+
 h2 {
-  font-size: 45px;
+  font-size: 32px;
 }
+
 h1,
 h2 {
   font-family: "Arial", Cursive;
   font-weight: 400;
   margin: 0;
 }
+
 .content-wrap {
-  max-width: 800px;
-  width: 85%;
+  max-width: var(--content-max-width);
+  width: var(--content-width);
   margin: 0 auto;
-  padding: 60px 0;
+  padding: var(--content-padding) 0;
 }
+
 h3 {
   margin-bottom: 0;
 }
@@ -85,29 +101,32 @@ h3 {
 /* Profile
 ------------------------------------*/
 header {
-  background: #183a37ff;
-  color: #f7fff7;
+  background: var(--color-rich-black);
+  color: var(--color-almost-white);
 }
+
 
 /* Projects
 ------------------------------------*/
 .projects {
-  background: #eeb868ff;
+  background: var(--color-project-bg);
 }
 .projects a {
-  color: #2f3061;
+  color: var(--color-blue-dark);
 }
+
 .projects .btn {
-  color: #f7fff7;
-  background: #310a31ff;
+  color: var(--color-almost-white);
+  background: var(--color-dark-purple);
   text-decoration: none;
   padding: 8px;
-  border-radius: 4px;
+  border-radius: var(--btn-radius);
   display: inline-block;
 }
 .projects .btn:hover {
-  background: rgba(47, 48, 97, 80%);
+  background: rgba(47, 48, 97, 0.8);
 }
+
 .project-item {
   overflow: hidden;
 }
@@ -118,9 +137,10 @@ header {
 /* Work Experience
 ------------------------------------*/
 .work-experience {
-  background: #b0413eff;
-  color: #f7fff7;
+  background: var(--color-work-bg);
+  color: var(--color-almost-white);
 }
+
 
 /* Education
 ------------------------------------*/
@@ -137,9 +157,10 @@ header {
 /* Contact Info
 ------------------------------------*/
 footer {
-  background: #7dcd85ff;
-  color: #f7fff7;
+  background: var(--color-footer);
+  color: var(--color-almost-white);
 }
+
 .contact-list {
   list-style-type: none;
   padding: 0;
@@ -147,8 +168,9 @@ footer {
 .contact-list a {
   padding: 15px;
   display: inline-block;
-  color: #2f3061;
+  color: var(--color-blue-dark);
 }
+
 
 /* Responsive
 ------------------------------------*/
@@ -160,6 +182,7 @@ footer {
   .project-item img {
     float: left;
     margin-right: 20px;
+    width: 300px;
   }
 
   .job-item {
@@ -171,18 +194,11 @@ footer {
     display: flex;
     justify-content: center;
   }
+
+  h1 { font-size: 100px; }
+  h2 { font-size: 45px; }
+  .content-wrap { padding: 60px 0; }
 }
 
-@media screen and (max-width: 749px) {
-  h1 {
-    font-size: 75px;
-    line-height: 0.9;
-    margin-bottom: 20px;
-  }
-  h2 {
-    line-height: 1;
-  }
-  .contact-list a {
-    padding: 5px;
-  }
-}
+
+

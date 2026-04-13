@@ -1,0 +1,22 @@
+{
+  "name": "css-portfolio",
+  "version": "0.1.0",
+  "private": true,
+  "description": "Static HTML/CSS portfolio",
+  "scripts": {
+    "start": "npx http-server . -p 5000",
+    "test": "npx playwright test",
+    "format": "npx prettier --write \"**/*.{html,css,md,json}\"",
+    "lint:css": "npx stylelint \"css/**/*.css\"",
+    "postinstall": "npx playwright install --with-deps",
+    "build:css": "npx esbuild css/styles.css --bundle --minify --outfile=css/styles.min.css",
+    "build": "npm run build:css"
+  },
+  "devDependencies": {
+    "@playwright/test": "^1.37.0",
+    "http-server": "^14.1.1",
+    "prettier": "^2.8.0",
+    "stylelint": "^14.0.0",
+    "esbuild": "^0.19.0"
+  }
+}

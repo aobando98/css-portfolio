@@ -1,0 +1,42 @@
+name: "Copilot Setup Steps — Playwright"
+
+on:
+  workflow_dispatch:
+  push:
+    paths:
+      - .github/workflows/copilot-setup-steps.yml
+
+jobs:
+  copilot-setup-steps:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: read
+    timeout-minutes: 30
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v5
+
+      - name: Set up Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: '20'
+          cache: 'npm'
+
+      - name: Print Node/NPM versions
+        run: |
+          node --version
+          npm --version
+
+      - name: Create temporary package.json if missing
+        run: |
+          if [ ! -f package.json ]; then
+            npm init -y
+          fi
+
+      - name: Install Playwright and browsers
+        run: |
+          npm install -D @playwright/test --no-audit --no-fund
+          npx playwright install --with-deps
+
+      - name: Verify Playwright installation
+        run: npx playwright --version

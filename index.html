@@ -6,11 +6,11 @@
     <title>
       Alberto Obando Zúñiga, Computer Science Engineer + Assistant Accountant
     </title>
-    <link
-      href="https://fonts.googleapis.com/css?family=Caveat|Montserrat:400,600&display=swap"
-      rel="stylesheet"
-    />
-    <link rel="stylesheet" href="css/styles.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css?family=Caveat|Montserrat:400,600&display=swap" rel="stylesheet">
+    <link rel="preload" href="css/styles.css" as="style" onload="this.rel='stylesheet'">
+    <noscript><link rel="stylesheet" href="css/styles.css"></noscript>
   </head>
   <body>
     <main>
@@ -41,6 +41,8 @@
             <img
               src="images/TourisTICOCar.jpg"
               alt="TourisTICO car in Turrialba"
+              loading="lazy"
+              decoding="async"
             />
             <h3>TourisTICO</h3>
             <p>
@@ -57,7 +59,7 @@
 
           <!-- Project 2 -->
           <section class="project-item">
-            <img src="images/506LabStore.jpg" alt="506 Lab Store Logo" />
+            <img src="images/506LabStore.jpg" alt="506 Lab Store Logo" loading="lazy" decoding="async" />
             <h3>506 Lab Store</h3>
             <p>
               506 Lab Store is a store that specializes in selling and repairing
@@ -74,7 +76,7 @@
 
           <!-- Project 3 -->
           <section class="project-item">
-            <img src="images/spookyGlitterLogo.jpg" alt="Spooky Glitter Logo" />
+            <img src="images/spookyGlitterLogo.jpg" alt="Spooky Glitter Logo" loading="lazy" decoding="async" />
             <h3>Spooky Glitter</h3>
             <p>
               Spooky Glitter is a store website where the users can see all the
