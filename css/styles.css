@@ -191,4 +191,40 @@ footer h2 { color: var(--color-rich-black); }
 
 
 
+/* Skills section styles */
+.skills .lead { font-size:1rem; margin:12px 0 18px; color:var(--color-rich-black); }
+.skills-grid { display: grid; gap:16px; grid-template-columns: 1fr; }
+@media screen and (min-width: 900px) { .skills-grid { grid-template-columns: repeat(3, 1fr); } }
+.skill-card { background: rgba(255,255,255,0.95); padding:16px; border-radius:8px; box-shadow:0 1px 4px rgba(0,0,0,0.08); color:var(--color-text); }
+.skill-card h3 { margin-top:0; }
+.skill-card.highlight { background: var(--color-rich-black); color: var(--color-almost-white); border: 1px solid rgba(255,255,255,0.06); }
+.skill-list { margin:8px 0 0 0; padding-left: 1rem; }
+.skill-meters { margin-top:18px; display:grid; gap:12px; }
+.meter { display:block; }
+.meter-label { font-size:0.95rem; margin-bottom:6px; color:var(--color-text); }
+.meter-bar { background:#e6e6e6; border-radius:8px; height:14px; overflow:hidden; }
+.meter-fill { height:100%; background:var(--color-dark-purple); width:0; transition:width 600ms ease; }
+@media (prefers-reduced-motion: reduce) { .meter-fill { transition:none; } }
+.cta { margin-top:18px; }
+
+/* End skills styles */
+
+/* Education enhancements */
+.education { position: relative; overflow: hidden; }
+.education::before { content: ""; position: absolute; inset: 0; background: linear-gradient(rgba(255,255,255,0.92), rgba(255,255,255,0.88)); pointer-events: none; }
+.education .content-wrap { position: relative; z-index: 1; }
+.education-intro { font-style: italic; margin-bottom: 16px; color: var(--color-text); max-width: 62%; }
+.edu-grid { display: grid; grid-template-columns: 1fr; gap: 18px; align-items: start; }
+@media screen and (min-width: 900px) { .edu-grid { grid-template-columns: 2fr 1fr; } }
+.edu-timeline { display: grid; gap: 14px; }
+.edu-card { background: rgba(255,255,255,0.96); padding: 14px; border-radius: 8px; box-shadow: 0 6px 14px rgba(0,0,0,0.06); }
+.edu-card header h3 { margin: 0 0 6px 0; }
+.edu-meta { font-weight: 600; color: #ffffff; font-size: 0.95rem; }
+.edu-sub { color: #ffffff; font-size: 0.95rem; margin-bottom: 8px; }
+.cert-list { list-style: none; padding-left: 0; margin: 8px 0 0 0; }
+.cert-list li { margin: 8px 0; }
+.edu-side h4 { margin-top: 0; }
+.download-cv .btn { width: 100%; text-align: center; }
+.edu-contact-note p { margin: 0; font-size: 0.95rem; }
+
 
